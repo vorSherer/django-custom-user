@@ -9,13 +9,13 @@ from .models import CustomUser
 class CustomUserCreationForm(UserCreationForm):
 
     class Meta:
-        models = CustomUser
-        fields = ('email', 'username')
+        model = CustomUser
+        fields = ('username', 'email')
 
 
 class CustomUserChangeForm(UserChangeForm):
 
     class Meta:
-        models = CustomUser
-        fields = ('email', 'username')
+        model = CustomUser
+        fields = ('username', 'email')
 

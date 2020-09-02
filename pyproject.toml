@@ -7,6 +7,7 @@ authors = ["vorSherer <tcpma2011@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 django = "^3.1.1"
+django-allauth = "^0.42.0"
 
 [tool.poetry.dev-dependencies]
 
