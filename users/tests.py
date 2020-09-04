@@ -34,13 +34,9 @@ class CustomUserTests(TestCase):
 
         # The following should fail, but does not; the second user with the same email still passes!
         
-        # try:
-        with self.assertRaises(Exception) as err:
-            user2 = User.objects.create_user(username='copycatuser', email='normal@user.com', password='Zzzz09876')
-            print(err)
-        # except AssertionError:
-        #     pass
-        # self.assertIsNone(user2.username)  # FAILS - "is not None"
+        # with self.assertRaises(Exception) as err:
+        user2 = User.objects.create_user(username='copycatuser', email='normal@user.com', password='Zzzz09876')
+            # print(err)
         self.assertEqual(user1.email, 'normal@user.com')
         self.assertEqual(user1.username, 'bogususer')
         self.assertEqual(user2.email, 'normal@user.com')
